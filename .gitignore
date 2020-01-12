@@ -1,0 +1,9 @@
+*
+
+!LICENSE
+!README.md
+!.gitignore
+!init.el
+!personal_config/
+!personal_config/**
+personal_config/*.el~
