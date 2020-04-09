@@ -4,7 +4,6 @@
 
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c++-mode-hook 'google-set-c-style)
-
 (add-hook 'c++-mode-hook 'company-mode)
 
 
@@ -22,13 +21,13 @@
 
 
 
-;; (require 'yasnippet)
-;; (yas-reload-all)
-;; (add-hook 'c++-mode-hook 'yas-minor-mode)
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'c++-mode-hook 'yas-minor-mode)
 ;; ;; (add-hook 'yas-minor-mode (lambda () (local-set-key (kbd "C-c i") 'yas-insert-snippet)))
-;; ;; (define-key 'c++-mode-map (kbd "C-c i") 'yas-insert-snippet)
-;; (require 'bind-key)
-;; (bind-key "C-c i" 'yas-insert-snippet)
+;; (define-key 'c++-mode-map (kbd "C-c i") 'yas-insert-snippet)
+(require 'bind-key)
+(bind-key "C-c i" 'yas-insert-snippet)
 
 
 ;; (provide 'nocheck-mode)

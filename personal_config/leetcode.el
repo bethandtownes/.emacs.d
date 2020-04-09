@@ -166,6 +166,7 @@
 
 
 (defun leetcode-submit-current-file ()
+  (message (expand-file-name (current-file-name)))
   (let ((filename (current-file-name)))
     (save-buffer)
     (message "buffer saved")

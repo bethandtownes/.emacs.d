@@ -32,6 +32,12 @@
 ;;(advice-add 'ansi-term :after #'(lambda (&optional dummy) (display-line-numbers-mode -1)))
 ;; company mode
 (show-paren-mode 1)
+(global-company-mode t)
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+(define-key company-search-map (kbd "C-n") 'company-select-next)
+(define-key company-search-map (kbd "C-p") 'company-select-previous)
+(define-key company-search-map (kbd "C-t") 'company-search-toggle-filtering)
 
 
 
@@ -54,7 +60,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;				    EDIT SHORTCUTS(CUSTOM)                    ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
- (bind-key "M-c" 'kill-ring-save)
- (bind-key "M-v" 'yank)
+ ;; (bind-key "M-c" 'kill-ring-save)
+ ;; (bind-key "M-v" 'yank)
 
 

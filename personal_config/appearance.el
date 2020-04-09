@@ -1,11 +1,14 @@
 (require 'frame)
-;; (setq default-frame-alist '((font . "Inconsolata Nerd Font Mono:weight=normal")))
 
-;; (set-face-attribute 'default
-;; 		    nil
-;; 		    :font "Inconsolata-g"
-;; 		    :height 160
-;; 		    :bold t)
+
+;; (setq default-frame-alist '((font . "Inconsolata Nerd Font Mono:weight=normal")))
+;; (setq default-frame-alist '((font . "Source Code Pro:weight=normal")))
+
+(set-face-attribute 'default
+		    nil
+		    :font "Source Code Pro"
+		    :height 82
+		    :bold nil)
 
 
 (setq-default display-line-numbers-width 1)
