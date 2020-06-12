@@ -4,6 +4,8 @@
 !README.md
 !.gitignore
 !init.el
+!themes/
+!themes/**
 !personal_config/
 !personal_config/**
 personal_config/*.el~

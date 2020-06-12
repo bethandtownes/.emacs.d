@@ -1,4 +1,4 @@
-(load "/usr/share/clang/clang-format.el")
+(load "/opt/local/libexec/llvm-10/share/clang/clang-format.el")
 (bind-key "C-c e f" 'clang-format)
 
 
@@ -18,7 +18,8 @@
 (setq lsp-prefer-flymake :none)
 (require 'lsp-mode)
 (add-hook 'c++-mode-hook #'lsp)
-
+(setq lsp-enable-on-type-formatting nil)
+(setq lsp-clients-clangd-executable "/opt/local/bin/clangd-mp-10")
 
 
 (require 'yasnippet)

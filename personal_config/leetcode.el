@@ -13,7 +13,7 @@
   (interactive)
   (if (not (get-buffer "*leetcode-repl*"))
       (progn
-	(make-term "leetcode-repl" "/usr/bin/zsh")
+	(make-term "leetcode-repl" "/bin/zsh")
 	(with-current-buffer "*leetcode-repl*"
 	  (term-mode)
 	  (term-char-mode))
