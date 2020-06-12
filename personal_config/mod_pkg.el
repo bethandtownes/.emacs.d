@@ -5,6 +5,11 @@
 			 ("melpa" . "http://melpa.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")))
 
+(setq package-archive-priorities
+'(("MELPA Stable" . 10)
+  ("MELPA" . 5)
+  ("GNU ELPA" . 0)))
+
 (setq package-list
       '(
 	use-package
