@@ -11,7 +11,6 @@
 	projectile
 	ace-window
 	counsel-projectile
-	eglot
 	smex
 	magit
 	ivy
@@ -24,6 +23,7 @@
 	monokai-theme
 	eterm-256color
 	yasnippet
+	lsp-mode
 	))
 
 
