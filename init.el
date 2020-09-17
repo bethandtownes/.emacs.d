@@ -1,4 +1,4 @@
-(setq yas-snippet-dirs '("~/Dropbox/localprojects/just-the-docs/snippets"))
+(setq yas-snippet-dirs '("~/Dropbox/localprojects/interview-prep/leetcode/snippets"))
 (setq-default mac-option-modifier 'meta)
 (setq ring-bell-function 'ignore)
 

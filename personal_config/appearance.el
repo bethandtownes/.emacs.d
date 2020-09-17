@@ -2,14 +2,15 @@
 
 
 ;; (setq default-frame-alist '((font . "Inconsolata Nerd Font Mono:weight=normal")))
-;; (setq default-frame-alist '((font . "Source Code Pro:weight=normal")))
 
-(setq-default line-spacing 0.2)
-(set-face-attribute 'default
-		    nil
-		    :font "Source Code Pro"
-		    :height 190
-		    :bold nil)
+(setq default-frame-alist '((font . "Source Code Pro-14")))
+
+;; (setq-default line-spacing 0.2)
+;; (set-face-attribute 'default
+;; 		    nil
+;; 		    :font "Source Code Pro"
+;; 		    :height 130
+;; 		    :bold nil)
 
 
 (setq-default display-line-numbers-width 1)

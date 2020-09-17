@@ -1,4 +1,4 @@
-(load "/opt/local/libexec/llvm-10/share/clang/clang-format.el")
+(load "/usr/share/emacs/site-lisp/clang-format-10/clang-format.el")
 (bind-key "C-c e f" 'clang-format)
 
 
@@ -19,7 +19,7 @@
 (require 'lsp-mode)
 (add-hook 'c++-mode-hook #'lsp)
 (setq lsp-enable-on-type-formatting nil)
-(setq lsp-clients-clangd-executable "/opt/local/bin/clangd-mp-10")
+;; (setq lsp-clients-clangd-executable "/opt/local/bin/clangd-mp-10")
 
 
 (require 'yasnippet)

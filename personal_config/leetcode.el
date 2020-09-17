@@ -13,7 +13,7 @@
   (interactive)
   (if (not (get-buffer "*leetcode-repl*"))
       (progn
-	(make-term "leetcode-repl" "/bin/zsh")
+	(make-term "leetcode-repl" "/bin/bash")
 	(with-current-buffer "*leetcode-repl*"
 	  (term-mode)
 	  (term-char-mode))
@@ -47,7 +47,7 @@
 	(setq w (get-buffer-window "*leetcode-repl*"))
 	(select-window w)
 	(setq h (window-height w))
-	(shrink-window (- h 28))
+	(shrink-window (- h 23))
 	(with-current-buffer "*leetcode-repl*"
 	  (leetcode-mode 1))
 	(if (equal "test.in" curname)
@@ -62,7 +62,7 @@
   "run the code"
   (interactive)
   (if (not (get-buffer "test.in"))
-      (find-file-noselect "~/leetcode-practice/test.in"))
+      (find-file-noselect "~/Dropbox/localprojects/interview-prep/leetcode/code/test.in"))
   (setq cur (selected-window))
   (delete-window-below)
   (display-buffer
@@ -71,7 +71,7 @@
   (setq w (get-buffer-window "test.in"))
   (select-window w)
   (setq h (window-height w))
-  (shrink-window (- h 28))
+  (shrink-window (- h 23))
   (with-current-buffer "test.in"
     (leetcode-mode 1))
   )
@@ -137,7 +137,7 @@
     (message "other buffer saved")
     (sleep-for 0.3)
     (with-current-buffer "*leetcode-repl*"
-      (term-send-raw-string (concat "submit" " " filename "\n")))
+      (term-send-raw-string (concat "leetcode submit" " " filename "\n")))
     )
   )
 
@@ -150,7 +150,10 @@
     (message "other buffer saved")
     (sleep-for 0.3)
     (with-current-buffer "*leetcode-repl*"
-      (term-send-raw-string (concat "lctestcustom" " " filename "\n")))
+      (term-send-raw-string (concat "leetcode test" " "
+				    filename
+				    " -t" " "
+				    "\"$(< /home/jasonsun0310/Dropbox/localprojects/interview-prep/leetcode/code/test.in)\"" "\n")))
     )
   )
 
@@ -161,8 +164,12 @@
     (message "buffer saved")
     (sleep-for 0.3)
     (with-current-buffer "*leetcode-repl*"
-      (term-send-raw-string (concat "lctestcustom" " " filename "\n")))
-    ))
+      (term-send-raw-string (concat "leetcode test" " "
+				    filename
+				    " -t" " "
+				    "\"$(< /home/jasonsun0310/Dropbox/localprojects/interview-prep/leetcode/code/test.in)\"" "\n")))
+    )
+  )
 
 
 (defun leetcode-submit-current-file ()
@@ -172,7 +179,7 @@
     (message "buffer saved")
     (sleep-for 0.3)
     (with-current-buffer "*leetcode-repl*"
-      (term-send-raw-string (concat "submit" " " filename "\n")))
+      (term-send-raw-string (concat "leetcode submit" " " filename "\n")))
     ))
 
 
